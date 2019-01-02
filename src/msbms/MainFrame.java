@@ -5,6 +5,8 @@
  */
 package msbms;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Hansi
@@ -28,6 +30,9 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
         jPanel2 = new javax.swing.JPanel();
         txtsearch = new javax.swing.JTextField();
         btnsearch = new javax.swing.JButton();
@@ -42,6 +47,12 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         txtlogAs = new javax.swing.JTextField();
 
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(51, 255, 255));
@@ -53,6 +64,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         btnmedicine.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnmedicine.setText("Medicines");
+        btnmedicine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmedicineActionPerformed(evt);
+            }
+        });
 
         btncompany.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btncompany.setText("Companies");
@@ -187,6 +203,12 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnmedicineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmedicineActionPerformed
+       MedicineDetailFrame mdf=new MedicineDetailFrame();
+       mdf.setVisible(true);
+       mdf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_btnmedicineActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -231,6 +253,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnsearch;
     private javax.swing.JButton btnvwSaleRcrd;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

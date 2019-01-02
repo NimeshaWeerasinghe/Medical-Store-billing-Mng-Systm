@@ -10,10 +10,11 @@ package msbms;
  * @author Hansi
  */
 public class productDetails {
+
     private int pro_ID;
     private String proName;
     private String coName;
-    private String batch_num;
+    private int quantity;
     private int rate;
     private String pro_type;
     private int mfg_date;
@@ -64,17 +65,6 @@ public class productDetails {
     /**
      * @return the batch_num
      */
-    public String getBatch_num() {
-        return batch_num;
-    }
-
-    /**
-     * @param batch_num the batch_num to set
-     */
-    public void setBatch_num(String batch_num) {
-        this.batch_num = batch_num;
-    }
-
     /**
      * @return the rate
      */
@@ -130,5 +120,19 @@ public class productDetails {
     public void setExp_date(int exp_date) {
         this.exp_date = exp_date;
     }
-    
+
+    /**
+     * @return the quantity
+     */
+    public int getQuantity() {
+        return quantity;
+    }
+
+    /**
+     * @param quantity the quantity to set
+     */
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
 }

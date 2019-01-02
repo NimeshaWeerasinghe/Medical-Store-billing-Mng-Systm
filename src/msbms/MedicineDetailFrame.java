@@ -5,6 +5,9 @@
  */
 package msbms;
 
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+
 /**
  *
  * @author Hansi
@@ -50,9 +53,19 @@ public class MedicineDetailFrame extends javax.swing.JFrame {
 
         btnmedInsrt.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnmedInsrt.setText("Insert Medicines");
+        btnmedInsrt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmedInsrtActionPerformed(evt);
+            }
+        });
 
         btnMedUpdt.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnMedUpdt.setText("Update Medicines");
+        btnMedUpdt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMedUpdtActionPerformed(evt);
+            }
+        });
 
         btnMedDlt.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnMedDlt.setText("Delete Medicines");
@@ -171,6 +184,18 @@ public class MedicineDetailFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnmedInsrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmedInsrtActionPerformed
+        MedicineInsertFrame mif=new MedicineInsertFrame();
+        mif.setVisible(true);
+        mif.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_btnmedInsrtActionPerformed
+
+    private void btnMedUpdtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedUpdtActionPerformed
+        MedicineUpdate mu=new MedicineUpdate();
+        mu.setVisible(true);
+        mu.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_btnMedUpdtActionPerformed
 
     /**
      * @param args the command line arguments
